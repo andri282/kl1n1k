@@ -218,3 +218,37 @@ footer h3 { color: var(--white); margin-bottom: 0.5rem;}
     .info-wrapper { grid-template-columns: 1fr; }
     .footer-content { flex-direction: column; gap: 1.5rem; text-align: center; }
 }
+/* --- Tambahan untuk Jadwal Dokter --- */
+.schedule-list {
+    margin-top: 1.5rem;
+    text-align: left;
+    background-color: var(--bg-color);
+    padding: 1rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+}
+
+.schedule-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0.5rem 0;
+    border-bottom: 1px dashed #cbd5e1;
+}
+
+.schedule-item:last-child {
+    border-bottom: none;
+}
+
+.schedule-item span:first-child {
+    font-weight: 600;
+    color: var(--text-color);
+    width: 60%;
+}
+
+.schedule-item span:last-child {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-align: right;
+    width: 40%;
+}
