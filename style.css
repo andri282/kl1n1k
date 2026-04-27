@@ -1,0 +1,220 @@
+/* Reset & Variabel */
+:root {
+    --primary-color: #0d9488; /* Teal yang calm */
+    --secondary-color: #f472b6; /* Soft pink */
+    --text-color: #334155;
+    --bg-color: #f8fafc;
+    --white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Typography */
+h1, h2, h3 { color: var(--primary-color); }
+.section-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+/* Navigasi */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo { font-size: 1.5rem; }
+.logo span { color: var(--secondary-color); }
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover { color: var(--primary-color); }
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, rgba(13, 148, 136, 0.1) 0%, rgba(244, 114, 182, 0.1) 100%);
+    padding: 6rem 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: var(--text-color);
+}
+
+.hero p {
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1.1rem;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+}
+
+.btn-primary:hover {
+    background-color: #0f766e;
+    transform: translateY(-2px);
+}
+
+/* Grid & Cards (Layanan & Dokter) */
+.services, .doctors, .info { padding: 4rem 0; }
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.card {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    text-align: center;
+    border-top: 4px solid var(--secondary-color);
+}
+
+.doc-card { border-top: 4px solid var(--primary-color); }
+.specialty { font-size: 0.9rem; color: #64748b; font-weight: 600; }
+
+/* Info & Jadwal */
+.info-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.info-box {
+    background: var(--white);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.info-box ul {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.info-box ul li { margin-bottom: 0.5rem; }
+
+.payment-badges {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.badge {
+    background: #e2e8f0;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* --- Tambahan Testimoni --- */
+.testimonials {
+    background-color: var(--white);
+    padding: 4rem 0;
+}
+
+.testimonial-card {
+    border-top: none; 
+    border-bottom: 4px solid var(--primary-color);
+    background-color: var(--bg-color);
+}
+
+.quote {
+    font-style: italic;
+    margin-bottom: 1.5rem;
+    color: #475569;
+}
+
+.testimonial-card h4 {
+    font-size: 0.9rem;
+    color: var(--primary-color);
+}
+
+/* Footer & Maps */
+footer {
+    background-color: var(--primary-color);
+    color: var(--white);
+    padding: 3rem 0 1rem 0;
+}
+
+footer h3 { color: var(--white); margin-bottom: 0.5rem;}
+
+.map-container {
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.8rem;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    padding-top: 1rem;
+}
+
+/* Responsiveness Mobile */
+@media (max-width: 768px) {
+    .nav-links { display: none; } /* Navigasi disembunyikan di versi mobile buat simplicity */
+    .info-wrapper { grid-template-columns: 1fr; }
+    .footer-content { flex-direction: column; gap: 1.5rem; text-align: center; }
+}
